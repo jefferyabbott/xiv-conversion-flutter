@@ -1,4 +1,4 @@
-# xiv_conversion
+# XIV Conversion
 
 Roman numeral conversion
 
