@@ -6,4 +6,4 @@ XIV Conversion is a simple app that converts roman numerals (such as XIV) to ara
 
 For the past several years while learning how to program, I have been using this utility as my own Hello, World example. Any time I learn a new programming language, I build this app, from scratch. The first version was released in 2013 for iOS. Since then, I have created and released versions for Android (Java) and the web (JavaScript).
 
-This version is my first publish Flutter project, for iOS and Android.
+This version is my first published Flutter project, for iOS and Android.
