@@ -144,8 +144,9 @@ class _MainScreenState extends State<MainScreen> {
   Expanded numberButtonExpanded(int number) {
     return Expanded(
       child: Padding(
-          padding: const EdgeInsets.all(kButtonPadding),
-          child: numberButton(number)),
+        padding: const EdgeInsets.all(kButtonPadding),
+        child: numberButton(number),
+      ),
     );
   }
 
@@ -158,24 +159,26 @@ class _MainScreenState extends State<MainScreen> {
             if (kButtonDisableRules[romanNumeralText]!
                 .any((rule) => romanNumeral.endsWith(rule))) ...[
               Expanded(
-                  child: Row(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Expanded(
-                    child: disabledNumeralButton(romanNumeralText),
-                  ),
-                ],
-              ))
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Expanded(
+                      child: disabledNumeralButton(romanNumeralText),
+                    ),
+                  ],
+                ),
+              )
             ] else ...[
               Expanded(
-                  child: Row(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Expanded(
-                    child: numeralButton(romanNumeralText),
-                  ),
-                ],
-              ))
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Expanded(
+                      child: numeralButton(romanNumeralText),
+                    ),
+                  ],
+                ),
+              )
             ],
             if (MediaQuery.of(context).orientation == Orientation.portrait) ...[
               Text('$romanNumeralValue')
