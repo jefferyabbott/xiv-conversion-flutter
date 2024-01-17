@@ -14,6 +14,7 @@ const double kButtonPadding = 4.0;
 
 const double kHeightFactor = 0.6;
 
+// presetFontSizes will always try these sizes, in this order:
 const fontSizes = [
   100.0,
   90.0,
@@ -32,6 +33,7 @@ const fontSizes = [
   10.0
 ];
 
+// if roman numeral ends like the values in the array, disable the button
 const kButtonDisableRules = {
   'I': <String>['III', 'IV', 'IX'],
   'V': <String>['II', 'IV', 'IX', 'V', 'VI', 'VII', 'VIII'],
