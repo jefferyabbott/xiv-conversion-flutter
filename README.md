@@ -2,15 +2,8 @@
 
 Roman numeral conversion
 
-## Getting Started
+XIV Conversion is a simple app that converts roman numerals (such as XIV) to arabic/cardinal numbers (such as 14). Why 14? My birthday falls on the 14th and when I first made an icon of the app, XIV looked good. It's short enough to fit on an icon and is unambiguously a roman numeral.
 
-This project is a starting point for a Flutter application.
+For the past several years while learning how to program, I have been using this utility as my own Hello, World example. Any time I learn a new programming language, I build this app, from scratch. The first version was released in 2013 for iOS. Since then, I have created and released versions for Android (Java) and the web (JavaScript).
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This version is my first publish Flutter project, for iOS and Android.
