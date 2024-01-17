@@ -225,12 +225,13 @@ class _MainScreenState extends State<MainScreen> {
                           ),
                           Expanded(
                             child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.stretch,
-                                children: [
-                                  romanNumeralButton('V', 5),
-                                  romanNumeralButton('X', 10),
-                                  romanNumeralButton('L', 50),
-                                ]),
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                romanNumeralButton('V', 5),
+                                romanNumeralButton('X', 10),
+                                romanNumeralButton('L', 50),
+                              ],
+                            ),
                           ),
                           Expanded(
                             child: Row(
@@ -417,125 +418,121 @@ class _MainScreenState extends State<MainScreen> {
                   : Expanded(
                       flex: 8,
                       child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Expanded(
-                              child: Row(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.stretch,
-                                  children: [
-                                    numberButtonExpanded(7),
-                                    numberButtonExpanded(8),
-                                    numberButtonExpanded(9),
-                                  ]),
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Expanded(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                numberButtonExpanded(7),
+                                numberButtonExpanded(8),
+                                numberButtonExpanded(9),
+                              ],
                             ),
-                            Expanded(
-                              child: Row(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.stretch,
-                                  children: [
-                                    numberButtonExpanded(4),
-                                    numberButtonExpanded(5),
-                                    numberButtonExpanded(6),
-                                  ]),
+                          ),
+                          Expanded(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                numberButtonExpanded(4),
+                                numberButtonExpanded(5),
+                                numberButtonExpanded(6),
+                              ],
                             ),
-                            Expanded(
-                              child: Row(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.stretch,
-                                  children: [
-                                    numberButtonExpanded(1),
-                                    numberButtonExpanded(2),
-                                    numberButtonExpanded(3),
-                                  ]),
+                          ),
+                          Expanded(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                numberButtonExpanded(1),
+                                numberButtonExpanded(2),
+                                numberButtonExpanded(3),
+                              ],
                             ),
-                            Expanded(
-                              child: Row(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.stretch,
-                                  children: [
-                                    Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(
-                                            kButtonPadding),
-                                        child: romanNumeral.isEmpty ||
-                                                cardinalNumber == 0
-                                            ? disabledActionButton(
-                                                CupertinoIcons.clear_circled)
-                                            : OutlinedButton(
-                                                onPressed: () {
-                                                  setState(() {
-                                                    romanNumeral = ' ';
-                                                    cardinalNumber = 0;
-                                                  });
-                                                },
-                                                style: ButtonStyle(
-                                                  backgroundColor:
-                                                      MaterialStateProperty.all(
-                                                          Colors.blue),
-                                                ),
-                                                child:
-                                                    const FractionallySizedBox(
-                                                  heightFactor: kHeightFactor,
-                                                  child: FittedBox(
-                                                    fit: BoxFit.fitHeight,
-                                                    child: Icon(
-                                                      CupertinoIcons
-                                                          .clear_circled,
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
+                          ),
+                          Expanded(
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding:
+                                        const EdgeInsets.all(kButtonPadding),
+                                    child: romanNumeral.isEmpty ||
+                                            cardinalNumber == 0
+                                        ? disabledActionButton(
+                                            CupertinoIcons.clear_circled)
+                                        : OutlinedButton(
+                                            onPressed: () {
+                                              setState(() {
+                                                romanNumeral = ' ';
+                                                cardinalNumber = 0;
+                                              });
+                                            },
+                                            style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStateProperty.all(
+                                                      Colors.blue),
+                                            ),
+                                            child: const FractionallySizedBox(
+                                              heightFactor: kHeightFactor,
+                                              child: FittedBox(
+                                                fit: BoxFit.fitHeight,
+                                                child: Icon(
+                                                  CupertinoIcons.clear_circled,
+                                                  color: Colors.white,
                                                 ),
                                               ),
-                                      ),
-                                    ),
-                                    numberButtonExpanded(0),
-                                    Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(
-                                            kButtonPadding),
-                                        child: romanNumeral.isEmpty ||
-                                                cardinalNumber == 0
-                                            ? disabledActionButton(
-                                                CupertinoIcons.delete_left)
-                                            : OutlinedButton(
-                                                onPressed: () {
-                                                  setState(() {
-                                                    if (cardinalNumber >= 10) {
-                                                      cardinalNumber =
-                                                          cardinalNumber ~/ 10;
-                                                      romanNumeral =
-                                                          convertToRoman(
-                                                              cardinalNumber);
-                                                    } else {
-                                                      cardinalNumber = 0;
-                                                      romanNumeral = ' ';
-                                                    }
-                                                  });
-                                                },
-                                                style: ButtonStyle(
-                                                  backgroundColor:
-                                                      MaterialStateProperty.all(
-                                                          Colors.blue),
-                                                ),
-                                                child:
-                                                    const FractionallySizedBox(
-                                                  heightFactor: kHeightFactor,
-                                                  child: FittedBox(
-                                                    fit: BoxFit.fitHeight,
-                                                    child: Icon(
-                                                      CupertinoIcons
-                                                          .delete_left,
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
+                                            ),
+                                          ),
+                                  ),
+                                ),
+                                numberButtonExpanded(0),
+                                Expanded(
+                                  child: Padding(
+                                    padding:
+                                        const EdgeInsets.all(kButtonPadding),
+                                    child: romanNumeral.isEmpty ||
+                                            cardinalNumber == 0
+                                        ? disabledActionButton(
+                                            CupertinoIcons.delete_left)
+                                        : OutlinedButton(
+                                            onPressed: () {
+                                              setState(() {
+                                                if (cardinalNumber >= 10) {
+                                                  cardinalNumber =
+                                                      cardinalNumber ~/ 10;
+                                                  romanNumeral = convertToRoman(
+                                                      cardinalNumber);
+                                                } else {
+                                                  cardinalNumber = 0;
+                                                  romanNumeral = ' ';
+                                                }
+                                              });
+                                            },
+                                            style: ButtonStyle(
+                                              backgroundColor:
+                                                  MaterialStateProperty.all(
+                                                      Colors.blue),
+                                            ),
+                                            child: const FractionallySizedBox(
+                                              heightFactor: kHeightFactor,
+                                              child: FittedBox(
+                                                fit: BoxFit.fitHeight,
+                                                child: Icon(
+                                                  CupertinoIcons.delete_left,
+                                                  color: Colors.white,
                                                 ),
                                               ),
-                                      ),
-                                    ),
-                                  ]),
+                                            ),
+                                          ),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ]),
+                          ),
+                        ],
+                      ),
                     ),
               BottomButtonRow(switchKeyboard, copyRomanNumeral),
             ],
